@@ -1,18 +1,18 @@
 ﻿using System;
 using System.Threading.Tasks;
+using shoppe.ViewModels;
 using Xamarin.Forms;
 
-namespace shoppe
+namespace shoppe.Views
 {
     public partial class ShoppePromotion : ContentPage
     {
-        DataManager manager;
+        ShoppePromotionViewModel viewModel;
 
         public ShoppePromotion()
         {
             InitializeComponent();
-
-            manager = DataManager.DefaultManager;
+            BindingContext = viewModel = new ShoppePromotionViewModel(this);
         }
 
         protected override async void OnAppearing()
@@ -20,7 +20,7 @@ namespace shoppe
             base.OnAppearing();
 
             // Set syncItems to true in order to synchronize the data on startup when running in offline mode
-            await RefreshItems(true, syncItems: true);
+            RefreshItems(true, syncItems: true);
         }
 
         // Event handlers
@@ -41,8 +41,6 @@ namespace shoppe
                 }
             }
 
-            // prevents background getting highlighted
-            promotionList.SelectedItem = null;
         }
 
         public async void OnRefresh(object sender, EventArgs e)
@@ -52,7 +50,7 @@ namespace shoppe
 
             try
             {
-                await RefreshItems(false, true);
+                RefreshItems(false, true);
             }catch (Exception ex){
                 error = ex;
             }finally{
@@ -67,14 +65,14 @@ namespace shoppe
 
         public async void OnSyncItems(object sender, EventArgs e)
         {
-            await RefreshItems(true, true);
+            RefreshItems(true, true);
         }
 
-        private async Task RefreshItems(bool showActivityIndicator, bool syncItems)
+        private void RefreshItems(bool showActivityIndicator, bool syncItems)
         {
             using (var scope = new ActivityIndicatorScope(syncIndicator, showActivityIndicator))
             {
-                promotionList.ItemsSource = await manager.GetShopPromotionsAsync(syncItems);
+                viewModel.GetShopPromotionCommand.Execute(null);
             }
         }
     }

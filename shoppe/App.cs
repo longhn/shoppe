@@ -1,5 +1,5 @@
 ﻿using System;
-
+using shoppe.Views;
 using Xamarin.Forms;
 
 namespace shoppe
@@ -10,7 +10,11 @@ namespace shoppe
 		{
             // The root page of your application
             //MainPage = new TodoList();
-            MainPage = new ShoppePromotion();
+            MainPage = new NavigationPage(new HomePage())
+            {
+                BarTextColor = Color.White,
+                BarBackgroundColor = Color.FromHex("#2B84D3")
+            };
 		}
 
 		protected override void OnStart ()

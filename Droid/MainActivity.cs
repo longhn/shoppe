@@ -12,6 +12,7 @@ using Microsoft.WindowsAzure.MobileServices;
 
 using Xamarin.Forms;
 using Xamarin.Forms.Platform.Android;
+using ImageCircle.Forms.Plugin.Droid;
 
 namespace shoppe.Droid
 {
@@ -31,6 +32,7 @@ namespace shoppe.Droid
 
 			// Initialize Xamarin Forms
 			Forms.Init (this, bundle);
+            ImageCircleRenderer.Init();
 
 			// Load the main application
 			LoadApplication (new App ());

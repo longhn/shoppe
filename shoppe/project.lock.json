@@ -166,6 +166,18 @@
           "lib/netstandard1.0/Newtonsoft.Json.dll": {}
         }
       },
+      "Refractored.MvvmHelpers/1.3.0": {
+        "type": "package",
+        "dependencies": {
+          "NETStandard.Library": "1.6.0"
+        },
+        "compile": {
+          "lib/netstandard1.0/MvvmHelpers.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.0/MvvmHelpers.dll": {}
+        }
+      },
       "runtime.debian.8-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.0": {
         "type": "package",
         "runtimeTargets": {
@@ -1150,6 +1162,18 @@
           "lib/netstandard1.3/System.Xml.XDocument.dll": {}
         }
       },
+      "Xam.Plugins.Forms.ImageCircle/1.8.1": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.Forms": "2.3.2.127"
+        },
+        "compile": {
+          "lib/portable-net45+wp80+win8+wpa81/ImageCircle.Forms.Plugin.Abstractions.dll": {}
+        },
+        "runtime": {
+          "lib/portable-net45+wp80+win8+wpa81/ImageCircle.Forms.Plugin.Abstractions.dll": {}
+        }
+      },
       "Xamarin.Forms/2.5.0.91635": {
         "type": "package",
         "compile": {
@@ -1461,6 +1485,19 @@
         "newtonsoft.json.9.0.1.nupkg.sha512",
         "newtonsoft.json.nuspec",
         "tools/install.ps1"
+      ]
+    },
+    "Refractored.MvvmHelpers/1.3.0": {
+      "sha512": "IBBHbITCvULc5f5/QH4qB7WBgiGg7BdeKtA5nsBeAXDlhOBWwNt50TBjQOK/s5cm3O+0puDB8n68Yyd9m3JHWQ==",
+      "type": "package",
+      "path": "refractored.mvvmhelpers/1.3.0",
+      "files": [
+        "lib/netstandard1.0/MvvmHelpers.deps.json",
+        "lib/netstandard1.0/MvvmHelpers.dll",
+        "lib/netstandard1.0/MvvmHelpers.pdb",
+        "lib/netstandard1.0/MvvmHelpers.xml",
+        "refractored.mvvmhelpers.1.3.0.nupkg.sha512",
+        "refractored.mvvmhelpers.nuspec"
       ]
     },
     "runtime.debian.8-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.0": {
@@ -4501,6 +4538,52 @@
         "system.xml.xdocument.nuspec"
       ]
     },
+    "Xam.Plugins.Forms.ImageCircle/1.8.1": {
+      "sha512": "gU4mTnwB3TCBw3eLP0MNpLUKNsWxYJe28NbpU/CY6YQaGtrIOZ5XRrvjz30w6AKhXeIA+DC6klUY1YqfCNWgPg==",
+      "type": "package",
+      "path": "xam.plugins.forms.imagecircle/1.8.1",
+      "files": [
+        "lib/MonoAndroid10/ImageCircle.Forms.Plugin.Abstractions.dll",
+        "lib/MonoAndroid10/ImageCircle.Forms.Plugin.Abstractions.pdb",
+        "lib/MonoAndroid10/ImageCircle.Forms.Plugin.Abstractions.xml",
+        "lib/MonoAndroid10/ImageCircle.Forms.Plugin.Android.dll",
+        "lib/MonoAndroid10/ImageCircle.Forms.Plugin.Android.pdb",
+        "lib/MonoAndroid10/ImageCircle.Forms.Plugin.Android.xml",
+        "lib/UAP10/ImageCircle.Forms.Plugin.Abstractions.dll",
+        "lib/UAP10/ImageCircle.Forms.Plugin.Abstractions.pdb",
+        "lib/UAP10/ImageCircle.Forms.Plugin.Abstractions.xml",
+        "lib/UAP10/ImageCircle.Forms.Plugin.UWP.dll",
+        "lib/UAP10/ImageCircle.Forms.Plugin.UWP.pdb",
+        "lib/UAP10/ImageCircle.Forms.Plugin.UWP.xml",
+        "lib/Xamarin.iOS10/ImageCircle.Forms.Plugin.Abstractions.dll",
+        "lib/Xamarin.iOS10/ImageCircle.Forms.Plugin.Abstractions.xml",
+        "lib/Xamarin.iOS10/ImageCircle.Forms.Plugin.iOS.dll",
+        "lib/Xamarin.iOS10/ImageCircle.Forms.Plugin.iOS.xml",
+        "lib/portable-net45+wp80+win8+wpa81/ImageCircle.Forms.Plugin.Abstractions.dll",
+        "lib/portable-net45+wp80+win8+wpa81/ImageCircle.Forms.Plugin.Abstractions.pdb",
+        "lib/portable-net45+wp80+win8+wpa81/ImageCircle.Forms.Plugin.Abstractions.xml",
+        "lib/win81/ImageCircle.Forms.Plugin.Abstractions.dll",
+        "lib/win81/ImageCircle.Forms.Plugin.Abstractions.pdb",
+        "lib/win81/ImageCircle.Forms.Plugin.Abstractions.xml",
+        "lib/win81/ImageCircle.Forms.Plugin.WindowsStore.dll",
+        "lib/win81/ImageCircle.Forms.Plugin.WindowsStore.pdb",
+        "lib/win81/ImageCircle.Forms.Plugin.WindowsStore.xml",
+        "lib/wp8/ImageCircle.Forms.Plugin.Abstractions.dll",
+        "lib/wp8/ImageCircle.Forms.Plugin.Abstractions.pdb",
+        "lib/wp8/ImageCircle.Forms.Plugin.Abstractions.xml",
+        "lib/wp8/ImageCircle.Forms.Plugin.WindowsPhone.dll",
+        "lib/wp8/ImageCircle.Forms.Plugin.WindowsPhone.pdb",
+        "lib/wp8/ImageCircle.Forms.Plugin.WindowsPhone.xml",
+        "lib/wpa81/ImageCircle.Forms.Plugin.Abstractions.dll",
+        "lib/wpa81/ImageCircle.Forms.Plugin.Abstractions.pdb",
+        "lib/wpa81/ImageCircle.Forms.Plugin.Abstractions.xml",
+        "lib/wpa81/ImageCircle.Forms.Plugin.WindowsPhoneRT.dll",
+        "lib/wpa81/ImageCircle.Forms.Plugin.WindowsPhoneRT.pdb",
+        "lib/wpa81/ImageCircle.Forms.Plugin.WindowsPhoneRT.xml",
+        "xam.plugins.forms.imagecircle.1.8.1.nupkg.sha512",
+        "xam.plugins.forms.imagecircle.nuspec"
+      ]
+    },
     "Xamarin.Forms/2.5.0.91635": {
       "sha512": "rsEaYnT21VJBmqg/ucUDtKQ9BNbpVMPquPr8Ss3NZ2Y6K2Q75h4T21j7R1hG5MqLfb7DeiHjBv8UnPW7+EPNcw==",
       "type": "package",
@@ -4688,6 +4771,8 @@
     "": [
       "Microsoft.Azure.Mobile.Client >= 4.0.2",
       "NETStandard.Library >= 2.0.1",
+      "Refractored.MvvmHelpers >= 1.3.0",
+      "Xam.Plugins.Forms.ImageCircle >= 1.8.1",
       "Xamarin.Forms >= 2.5.0.91635"
     ],
     ".NETStandard,Version=v1.4": []
@@ -4713,7 +4798,12 @@
     "dependencies": {
       "Microsoft.Azure.Mobile.Client": "4.0.2",
       "NETStandard.Library": "2.0.1",
-      "Xamarin.Forms": "2.5.0.91635"
+      "Refractored.MvvmHelpers": "1.3.0",
+      "Xamarin.Forms": "2.5.0.91635",
+      "Xam.Plugins.Forms.ImageCircle": {
+        "target": "Package",
+        "version": "[1.8.1, )"
+      }
     },
     "frameworks": {
       "netstandard1.4": {

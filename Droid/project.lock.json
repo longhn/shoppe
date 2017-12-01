@@ -85,6 +85,15 @@
           "lib/portable-net45+win+wpa81+MonoAndroid10+xamarinios10+MonoTouch10/PInvoke.Windows.Core.dll": {}
         }
       },
+      "Refractored.MvvmHelpers/1.3.0": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard1.0/MvvmHelpers.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.0/MvvmHelpers.dll": {}
+        }
+      },
       "Validation/2.2.8": {
         "type": "package",
         "compile": {
@@ -92,6 +101,20 @@
         },
         "runtime": {
           "lib/dotnet/Validation.dll": {}
+        }
+      },
+      "Xam.Plugins.Forms.ImageCircle/1.8.1": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.Forms": "2.3.2.127"
+        },
+        "compile": {
+          "lib/MonoAndroid10/ImageCircle.Forms.Plugin.Abstractions.dll": {},
+          "lib/MonoAndroid10/ImageCircle.Forms.Plugin.Android.dll": {}
+        },
+        "runtime": {
+          "lib/MonoAndroid10/ImageCircle.Forms.Plugin.Abstractions.dll": {},
+          "lib/MonoAndroid10/ImageCircle.Forms.Plugin.Android.dll": {}
         }
       },
       "Xamarin.Android.Support.Animated.Vector.Drawable/23.3.0": {
@@ -360,6 +383,19 @@
         "pinvoke.windows.core.nuspec"
       ]
     },
+    "Refractored.MvvmHelpers/1.3.0": {
+      "sha512": "IBBHbITCvULc5f5/QH4qB7WBgiGg7BdeKtA5nsBeAXDlhOBWwNt50TBjQOK/s5cm3O+0puDB8n68Yyd9m3JHWQ==",
+      "type": "package",
+      "path": "refractored.mvvmhelpers/1.3.0",
+      "files": [
+        "lib/netstandard1.0/MvvmHelpers.deps.json",
+        "lib/netstandard1.0/MvvmHelpers.dll",
+        "lib/netstandard1.0/MvvmHelpers.pdb",
+        "lib/netstandard1.0/MvvmHelpers.xml",
+        "refractored.mvvmhelpers.1.3.0.nupkg.sha512",
+        "refractored.mvvmhelpers.nuspec"
+      ]
+    },
     "Validation/2.2.8": {
       "sha512": "DMNc7JhPlgRwnR+NNb+ldoluObL+RBw96aMoiZae/Looa4vgaAnIysmle/bV2OKqDNW9oUBDckPyfa2+sX6JdA==",
       "type": "package",
@@ -380,6 +416,52 @@
         "tools/uninstall_snippets.cmd",
         "validation.2.2.8.nupkg.sha512",
         "validation.nuspec"
+      ]
+    },
+    "Xam.Plugins.Forms.ImageCircle/1.8.1": {
+      "sha512": "gU4mTnwB3TCBw3eLP0MNpLUKNsWxYJe28NbpU/CY6YQaGtrIOZ5XRrvjz30w6AKhXeIA+DC6klUY1YqfCNWgPg==",
+      "type": "package",
+      "path": "xam.plugins.forms.imagecircle/1.8.1",
+      "files": [
+        "lib/MonoAndroid10/ImageCircle.Forms.Plugin.Abstractions.dll",
+        "lib/MonoAndroid10/ImageCircle.Forms.Plugin.Abstractions.pdb",
+        "lib/MonoAndroid10/ImageCircle.Forms.Plugin.Abstractions.xml",
+        "lib/MonoAndroid10/ImageCircle.Forms.Plugin.Android.dll",
+        "lib/MonoAndroid10/ImageCircle.Forms.Plugin.Android.pdb",
+        "lib/MonoAndroid10/ImageCircle.Forms.Plugin.Android.xml",
+        "lib/UAP10/ImageCircle.Forms.Plugin.Abstractions.dll",
+        "lib/UAP10/ImageCircle.Forms.Plugin.Abstractions.pdb",
+        "lib/UAP10/ImageCircle.Forms.Plugin.Abstractions.xml",
+        "lib/UAP10/ImageCircle.Forms.Plugin.UWP.dll",
+        "lib/UAP10/ImageCircle.Forms.Plugin.UWP.pdb",
+        "lib/UAP10/ImageCircle.Forms.Plugin.UWP.xml",
+        "lib/Xamarin.iOS10/ImageCircle.Forms.Plugin.Abstractions.dll",
+        "lib/Xamarin.iOS10/ImageCircle.Forms.Plugin.Abstractions.xml",
+        "lib/Xamarin.iOS10/ImageCircle.Forms.Plugin.iOS.dll",
+        "lib/Xamarin.iOS10/ImageCircle.Forms.Plugin.iOS.xml",
+        "lib/portable-net45+wp80+win8+wpa81/ImageCircle.Forms.Plugin.Abstractions.dll",
+        "lib/portable-net45+wp80+win8+wpa81/ImageCircle.Forms.Plugin.Abstractions.pdb",
+        "lib/portable-net45+wp80+win8+wpa81/ImageCircle.Forms.Plugin.Abstractions.xml",
+        "lib/win81/ImageCircle.Forms.Plugin.Abstractions.dll",
+        "lib/win81/ImageCircle.Forms.Plugin.Abstractions.pdb",
+        "lib/win81/ImageCircle.Forms.Plugin.Abstractions.xml",
+        "lib/win81/ImageCircle.Forms.Plugin.WindowsStore.dll",
+        "lib/win81/ImageCircle.Forms.Plugin.WindowsStore.pdb",
+        "lib/win81/ImageCircle.Forms.Plugin.WindowsStore.xml",
+        "lib/wp8/ImageCircle.Forms.Plugin.Abstractions.dll",
+        "lib/wp8/ImageCircle.Forms.Plugin.Abstractions.pdb",
+        "lib/wp8/ImageCircle.Forms.Plugin.Abstractions.xml",
+        "lib/wp8/ImageCircle.Forms.Plugin.WindowsPhone.dll",
+        "lib/wp8/ImageCircle.Forms.Plugin.WindowsPhone.pdb",
+        "lib/wp8/ImageCircle.Forms.Plugin.WindowsPhone.xml",
+        "lib/wpa81/ImageCircle.Forms.Plugin.Abstractions.dll",
+        "lib/wpa81/ImageCircle.Forms.Plugin.Abstractions.pdb",
+        "lib/wpa81/ImageCircle.Forms.Plugin.Abstractions.xml",
+        "lib/wpa81/ImageCircle.Forms.Plugin.WindowsPhoneRT.dll",
+        "lib/wpa81/ImageCircle.Forms.Plugin.WindowsPhoneRT.pdb",
+        "lib/wpa81/ImageCircle.Forms.Plugin.WindowsPhoneRT.xml",
+        "xam.plugins.forms.imagecircle.1.8.1.nupkg.sha512",
+        "xam.plugins.forms.imagecircle.nuspec"
       ]
     },
     "Xamarin.Android.Support.Animated.Vector.Drawable/23.3.0": {
@@ -636,6 +718,8 @@
   "projectFileDependencyGroups": {
     "": [
       "Microsoft.Azure.Mobile.Client >= 4.0.1",
+      "Refractored.MvvmHelpers >= 1.3.0",
+      "Xam.Plugins.Forms.ImageCircle >= 1.8.1",
       "Xamarin.Android.Support.Design >= 23.3.0",
       "Xamarin.Android.Support.v4 >= 23.3.0",
       "Xamarin.Android.Support.v7.AppCompat >= 23.3.0",
@@ -665,12 +749,17 @@
     },
     "dependencies": {
       "Microsoft.Azure.Mobile.Client": "4.0.1",
-      "Xamarin.Forms": "2.3.4.247",
+      "Refractored.MvvmHelpers": "1.3.0",
       "Xamarin.Android.Support.Design": "23.3.0",
       "Xamarin.Android.Support.v4": "23.3.0",
       "Xamarin.Android.Support.v7.AppCompat": "23.3.0",
       "Xamarin.Android.Support.v7.CardView": "23.3.0",
-      "Xamarin.Android.Support.v7.MediaRouter": "23.3.0"
+      "Xamarin.Android.Support.v7.MediaRouter": "23.3.0",
+      "Xamarin.Forms": "2.3.4.247",
+      "Xam.Plugins.Forms.ImageCircle": {
+        "target": "Package",
+        "version": "[1.8.1, )"
+      }
     },
     "frameworks": {
       "monoandroid80": {}

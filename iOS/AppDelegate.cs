@@ -10,6 +10,7 @@ using Microsoft.WindowsAzure.MobileServices;
 
 using Xamarin.Forms;
 using Xamarin.Forms.Platform.iOS;
+using ImageCircle.Forms.Plugin.iOS;
 
 namespace shoppe.iOS
 {
@@ -21,8 +22,17 @@ namespace shoppe.iOS
 			// Initialize Azure Mobile Apps
 			CurrentPlatform.Init();
 
+            UINavigationBar.Appearance.BarTintColor = UIColor.FromRGB(43, 132, 211); //bar background
+            UINavigationBar.Appearance.TintColor = UIColor.White; //Tint color of button items
+            UINavigationBar.Appearance.SetTitleTextAttributes(new UITextAttributes()
+            {
+                Font = UIFont.FromName("HelveticaNeue-Light", (nfloat)20f),
+                TextColor = UIColor.White
+            });
+
 			// Initialize Xamarin Forms
 			Forms.Init();
+            ImageCircleRenderer.Init();
 
 			LoadApplication(new App ());
 

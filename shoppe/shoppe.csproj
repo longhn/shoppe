@@ -34,20 +34,30 @@
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="App.cs" />
-    <Compile Include="ShoppePromotion.xaml.cs">
-      <DependentUpon>ShoppePromotion.xaml</DependentUpon>
-    </Compile>
     <Compile Include="Helpers\Constants.cs" />
     <Compile Include="Services\DataManager.cs" />
     <Compile Include="Models\ShopPromotion.cs" />
     <Compile Include="Helpers\ActivityIndicatorScope.cs" />
+    <Compile Include="Views\ShoppePromotion.xaml.cs">
+      <DependentUpon>ShoppePromotion.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\HomePage.xaml.cs">
+      <DependentUpon>HomePage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ViewModels\HomeViewModel.cs" />
+    <Compile Include="ViewModels\ViewModelBase.cs" />
+    <Compile Include="ViewModels\ShoppePromotionViewModel.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
   <ItemGroup>
     <None Include="project.json" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="ShoppePromotion.xaml">
+    <EmbeddedResource Include="Views\ShoppePromotion.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\HomePage.xaml">
+      <SubType>Designer</SubType>
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
   </ItemGroup>
@@ -55,5 +65,7 @@
     <Folder Include="Helpers\" />
     <Folder Include="Models\" />
     <Folder Include="Services\" />
+    <Folder Include="Views\" />
+    <Folder Include="ViewModels\" />
   </ItemGroup>
 </Project>
