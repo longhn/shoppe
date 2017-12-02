@@ -29,7 +29,7 @@
                 TextColor="White" 
                 Text="Get Promotions"/>
             <Button 
-                x:Name="ButtonLeaveFeedback"
+                x:Name="ButtonGiveFeedback"
                 Grid.Row="1"
                 Grid.Column="1"
                 BackgroundColor="#81C134" 

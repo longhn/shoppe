@@ -18,9 +18,9 @@ namespace shoppe.Views
                 await Navigation.PushAsync(new ShoppePromotion());
             };
 
-            ButtonLeaveFeedback.Clicked += async (sender, e) =>
+            ButtonGiveFeedback.Clicked += async (sender, e) =>
             {
-                //await Navigation.PushAsync(new FeedbackPage());
+                await Navigation.PushAsync(new FeedbackPage());
             };
         }
     }

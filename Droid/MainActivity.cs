@@ -16,8 +16,7 @@ using ImageCircle.Forms.Plugin.Droid;
 
 namespace shoppe.Droid
 {
-	[Activity (Label = "shoppe.Droid",
-		Icon = "@drawable/icon",
+	[Activity (Label = "DXB Shoppe", Icon = "@drawable/icon",
 		MainLauncher = true,
 		ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation,
 		Theme = "@android:style/Theme.Holo.Light")]
@@ -25,6 +24,9 @@ namespace shoppe.Droid
 	{
 		protected override void OnCreate (Bundle bundle)
 		{
+            FormsAppCompatActivity.ToolbarResource = Resource.Layout.toolbar;
+            FormsAppCompatActivity.TabLayoutResource = Resource.Layout.tabs;
+
 			base.OnCreate (bundle);
 
 			// Initialize Azure Mobile Apps
@@ -33,6 +35,8 @@ namespace shoppe.Droid
 			// Initialize Xamarin Forms
 			Forms.Init (this, bundle);
             ImageCircleRenderer.Init();
+
+            ActionBar.SetIcon(Android.Resource.Color.Transparent);
 
 			// Load the main application
 			LoadApplication (new App ());

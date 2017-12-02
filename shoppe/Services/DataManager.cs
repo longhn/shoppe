@@ -113,6 +113,31 @@ namespace shoppe
             return null;
         }
 
+        public async Task<IEnumerable<ShopPromotion>> GetShopPromotionsAsync2(bool syncItems = false)
+        {
+            try
+            {
+#if OFFLINE_SYNC_ENABLED
+                if (syncItems)
+                {
+                    await this.SyncAsync();
+                }
+#endif
+                IEnumerable<ShopPromotion> items = await shoppeTable.ToEnumerableAsync();
+
+                return items;
+            }
+            catch (MobileServiceInvalidOperationException msioe)
+            {
+                Debug.WriteLine(@"Invalid sync operation: {0}", msioe.Message);
+            }
+            catch (Exception e)
+            {
+                Debug.WriteLine(@"Sync error: {0}", e.Message);
+            }
+            return null;
+        }
+
 
 #if OFFLINE_SYNC_ENABLED
         public async Task SyncAsync()

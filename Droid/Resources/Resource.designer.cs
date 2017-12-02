@@ -2219,8 +2219,11 @@ namespace shoppe.Droid
 			// aapt resource value: 0x7f0200a1
 			public const int mr_ic_play_light = 2130837665;
 			
+			// aapt resource value: 0x7f0200a3
+			public const int notification_template_icon_bg = 2130837667;
+			
 			// aapt resource value: 0x7f0200a2
-			public const int notification_template_icon_bg = 2130837666;
+			public const int shopping = 2130837666;
 			
 			static Drawable()
 			{
@@ -2610,6 +2613,9 @@ namespace shoppe.Droid
 			// aapt resource value: 0x7f070013
 			public const int showTitle = 2131165203;
 			
+			// aapt resource value: 0x7f070099
+			public const int sliding_tabs = 2131165337;
+			
 			// aapt resource value: 0x7f07006d
 			public const int snackbar_action = 2131165293;
 			
@@ -2663,6 +2669,9 @@ namespace shoppe.Droid
 			
 			// aapt resource value: 0x7f070048
 			public const int title_template = 2131165256;
+			
+			// aapt resource value: 0x7f07009a
+			public const int toolbar = 2131165338;
 			
 			// aapt resource value: 0x7f070032
 			public const int top = 2131165234;
@@ -2936,6 +2945,12 @@ namespace shoppe.Droid
 			
 			// aapt resource value: 0x7f030037
 			public const int support_simple_spinner_dropdown_item = 2130903095;
+			
+			// aapt resource value: 0x7f030038
+			public const int tabs = 2130903096;
+			
+			// aapt resource value: 0x7f030039
+			public const int toolbar = 2130903097;
 			
 			static Layout()
 			{

@@ -4799,11 +4799,8 @@
       "Microsoft.Azure.Mobile.Client": "4.0.2",
       "NETStandard.Library": "2.0.1",
       "Refractored.MvvmHelpers": "1.3.0",
-      "Xamarin.Forms": "2.5.0.91635",
-      "Xam.Plugins.Forms.ImageCircle": {
-        "target": "Package",
-        "version": "[1.8.1, )"
-      }
+      "Xam.Plugins.Forms.ImageCircle": "1.8.1",
+      "Xamarin.Forms": "2.5.0.91635"
     },
     "frameworks": {
       "netstandard1.4": {
