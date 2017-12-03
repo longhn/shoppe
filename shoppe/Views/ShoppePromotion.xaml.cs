@@ -19,28 +19,13 @@ namespace shoppe.Views
         {
             base.OnAppearing();
 
-            // Set syncItems to true in order to synchronize the data on startup when running in offline mode
-            RefreshItems(true, syncItems: true);
-        }
+            var pages = Application.Current.MainPage.Navigation.NavigationStack;
 
-        // Event handlers
-        public async void OnSelected(object sender, SelectedItemChangedEventArgs e)
-        {
-            var shop = e.SelectedItem as ShopPromotion;
-
-            if (Device.RuntimePlatform != Device.iOS && shop != null)
+            if (pages.Count < 3)
             {
-                // Not iOS - the swipe-to-delete is discoverable there
-                if (Device.RuntimePlatform == Device.Android)
-                {
-                    
-                }
-                else
-                {
-                    // Windows, not all platforms support the Context Actions yet
-                }
+                // Set syncItems to true in order to synchronize the data on startup when running in offline mode
+                RefreshItems(true, syncItems: true);
             }
-
         }
 
         public async void OnRefresh(object sender, EventArgs e)

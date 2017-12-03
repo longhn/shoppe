@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Threading.Tasks;
 using MvvmHelpers;
+using shoppe.Views;
 using Xamarin.Forms;
 
 namespace shoppe.ViewModels
@@ -16,6 +17,26 @@ namespace shoppe.ViewModels
         {
             manager = DataManager.DefaultManager;
             ShopPromotionList = new ObservableRangeCollection<ShopPromotion>();
+            SelectedShop = new ShopPromotion();
+        }
+
+        ShopPromotion selectedShop;
+        public ShopPromotion SelectedShop
+        {
+            get { return selectedShop; }
+            set
+            {
+                selectedShop = value;
+                OnPropertyChanged("SelectedShop");
+
+                if (selectedShop == null)
+                    return;
+
+                if (ShopPromotionList != null && ShopPromotionList.Count > 0) {
+                    page.Navigation.PushAsync(new ShoppePage(selectedShop));
+                    SelectedShop = null;
+                }
+            }
         }
 
         private Command getShopPromotionCommand;

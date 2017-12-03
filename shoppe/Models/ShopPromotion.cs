@@ -9,8 +9,10 @@ namespace shoppe
         string id;
         string shopName;
         string shopImageUrl;
+        string shopBannerImageUrl;
         string promotion;
         string location;
+        string shopDetails;
 
         [JsonProperty(PropertyName = "id")]
         public string Id
@@ -36,6 +38,13 @@ namespace shoppe
             set { shopImageUrl = value; }
         }
 
+        [JsonProperty(PropertyName = "shopBannerImageUrl")]
+        public string ShopBannerImageUrl
+        {
+            get { return shopBannerImageUrl; }
+            set { shopBannerImageUrl = value; }
+        }
+
         [JsonProperty(PropertyName = "promotion")]
         public string Promotion
         {
@@ -48,6 +57,13 @@ namespace shoppe
         {
             get { return location; }
             set { location = value; }
+        }
+
+        [JsonProperty(PropertyName = "shopDetails")]
+        public string ShopDetails
+        {
+            get { return shopDetails; }
+            set { shopDetails = value; }
         }
     }
 }

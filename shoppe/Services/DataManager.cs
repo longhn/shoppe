@@ -29,7 +29,7 @@ namespace shoppe
         MobileServiceClient client;
 
 #if OFFLINE_SYNC_ENABLED
-        IMobileServiceSyncTable<TodoItem> todoTable;
+        IMobileServiceSyncTable<ShopPromotion> shoppeTable;
 #else
         IMobileServiceTable<ShopPromotion> shoppeTable;
 #endif
@@ -47,7 +47,7 @@ namespace shoppe
             //Initializes the SyncContext using the default IMobileServiceSyncHandler.
             this.client.SyncContext.InitializeAsync(store);
 
-            this.todoTable = client.GetSyncTable<TodoItem>();
+            this.shoppeTable = client.GetSyncTable<ShopPromotion>();
 #else
             this.shoppeTable = client.GetTable<ShopPromotion>();
 #endif
@@ -137,7 +137,6 @@ namespace shoppe
             }
             return null;
         }
-
 
 #if OFFLINE_SYNC_ENABLED
         public async Task SyncAsync()

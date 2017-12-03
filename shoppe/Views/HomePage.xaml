@@ -15,7 +15,7 @@
             </Grid.ColumnDefinitions>
 
             <Image
-                x:Name="HeroImage"
+                x:Name="ShoppingImage"
                 Grid.ColumnSpan="2"
                 Source="shopping.jpg"
                 Aspect="AspectFill"

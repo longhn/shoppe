@@ -1,5 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:controls="clr-namespace:ImageCircle.Forms.Plugin.Abstractions;assembly=ImageCircle.Forms.Plugin.Abstractions" x:Class="shoppe.Views.ShoppePromotion" Title="Shoppe Promotion">
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+    xmlns:controls="clr-namespace:ImageCircle.Forms.Plugin.Abstractions;assembly=ImageCircle.Forms.Plugin.Abstractions" 
+    xmlns:design="clr-namespace:shoppe.ViewModels;assembly=shoppe" 
+    x:Class="shoppe.Views.ShoppePromotion"
+    BindingContext="{x:Static design:ViewModelLocator.ShoppePromotionViewModel}" 
+    Title="Shoppe Promotion">
     <ContentPage.Content>
         <StackLayout>
             <StackLayout HorizontalOptions="CenterAndExpand" Orientation="Horizontal" Spacing="10" Padding="10" IsVisible="{Binding IsBusy}">
@@ -11,6 +16,7 @@
             </StackLayout>
             <ListView 
                 x:Name="PromotionList" 
+                SelectedItem="{Binding SelectedShop, Mode=TwoWay}"
                 ItemsSource="{Binding ShopPromotionList}"
                 IsPullToRefreshEnabled="true" 
                 Refreshing="OnRefresh"
